@@ -1,1192 +1,599 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- =========================================================
-       BASIC SEO
-       ========================================================= -->
+  <meta charset="utf-8">
   <title>Adam Abou Zeid</title>
-
-  <meta
-    name="description"
-    content="Adam Abou Zeid — Software Engineer working on AI, LLM systems, SaaS products, mobile applications, and full-stack software."
-  />
-
-  <meta
-    name="keywords"
-    content="Adam Abou Zeid, Software Engineer, AI Engineer, LLM Engineer, RAG, LangGraph, React Native, Next.js, NestJS, FastAPI, Maw3ad, Ecole Polytechnique"
-  />
-
-  <meta name="author" content="Adam Abou Zeid" />
-
-  <!-- =========================================================
-       OPEN GRAPH
-       Useful when your website is shared on LinkedIn, WhatsApp, etc.
-       ========================================================= -->
-  <meta property="og:title" content="Adam Abou Zeid" />
-  <meta
-    property="og:description"
-    content="Software Engineer focused on AI, LLM systems, SaaS, and production software."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://adamabouzeid.com/" />
-
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    /* =========================================================
-       BASE
-       ========================================================= */
-
-    :root {
-      --background: #ffffff;
-      --text: #171717;
-      --secondary: #555555;
-      --light: #777777;
-      --border: #dddddd;
-      --link: #174ea6;
-      --link-hover: #0b3574;
-
-      /*
-       * Ismail's site is intentionally simple and text-heavy.
-       * Keep the content column relatively narrow so it reads
-       * more like a technical profile than a marketing site.
-       */
-      --content-width: 820px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      padding: 0;
-
-      background: var(--background);
-      color: var(--text);
-
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-      font-size: 16px;
+      background: #fffffb;
+      color: #111;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 18px;
       line-height: 1.62;
-
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
 
-    /* =========================================================
-       PAGE CONTAINER
-       ========================================================= */
-
-    .container {
-      width: calc(100% - 40px);
-      max-width: var(--content-width);
-
+    .page {
+      max-width: 840px;
       margin: 0 auto;
-
-      padding-top: 58px;
-      padding-bottom: 72px;
+      padding: 42px 24px 70px;
     }
-
-    /* =========================================================
-       HEADER
-       ========================================================= */
 
     header {
-      margin-bottom: 26px;
+      margin-bottom: 42px;
     }
 
     h1 {
-      margin: 0 0 3px 0;
-
-      font-size: 2rem;
-      line-height: 1.2;
-
-      font-weight: 700;
-      letter-spacing: -0.035em;
-    }
-
-    .specialty {
-      margin: 0 0 5px 0;
-
-      font-size: 1rem;
-      font-weight: 500;
-
-      color: var(--secondary);
-    }
-
-    .contact-line {
-      margin: 0;
-
-      font-size: 0.96rem;
-      color: var(--secondary);
-    }
-
-    .contact-line a {
-      color: var(--link);
-    }
-
-    /* =========================================================
-       LINKS
-       ========================================================= */
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--link-hover);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
-
-    nav {
-      margin-top: 18px;
-      margin-bottom: 27px;
-
-      display: flex;
-      flex-wrap: wrap;
-
-      column-gap: 17px;
-      row-gap: 5px;
-    }
-
-    nav a {
-      font-size: 0.94rem;
-      font-weight: 500;
-    }
-
-    /* =========================================================
-       INTRO
-       ========================================================= */
-
-    .intro {
-      margin-top: 0;
-      margin-bottom: 36px;
-
-      max-width: 790px;
-    }
-
-    .intro p {
-      margin: 0;
-    }
-
-    /* =========================================================
-       SECTIONS
-       ========================================================= */
-
-    section {
-      margin-bottom: 39px;
-
-      /*
-       * Keeps anchor navigation from putting the section title
-       * directly against the top of the browser window.
-       */
-      scroll-margin-top: 25px;
+      font-size: 42px;
+      line-height: 1.05;
+      margin: 0 0 10px;
+      font-weight: normal;
+      letter-spacing: -0.03em;
     }
 
     h2 {
-      margin: 0 0 19px 0;
-      padding-bottom: 5px;
-
-      border-bottom: 1px solid var(--border);
-
-      font-size: 1.36rem;
-      line-height: 1.3;
-
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 24px;
+      margin: 52px 0 14px;
+      padding-top: 18px;
+      border-top: 1px solid #ddd8cc;
+      font-weight: normal;
+      letter-spacing: -0.01em;
     }
 
-    /* =========================================================
-       EXPERIENCE / PROJECT ENTRIES
-       ========================================================= */
-
-    .entry {
-      margin-bottom: 27px;
+    h3 {
+      font-size: 19px;
+      margin: 28px 0 4px;
+      font-weight: bold;
     }
 
-    .entry:last-child {
-      margin-bottom: 0;
+    p {
+      margin: 0 0 16px;
     }
-
-    .entry h3 {
-      margin: 0;
-
-      font-size: 1.04rem;
-      line-height: 1.42;
-
-      font-weight: 700;
-    }
-
-    .entry-meta {
-      margin-top: 2px;
-      margin-bottom: 7px;
-
-      color: var(--secondary);
-
-      font-size: 0.91rem;
-    }
-
-    .entry p {
-      margin-top: 7px;
-      margin-bottom: 7px;
-    }
-
-    /* =========================================================
-       LISTS
-       ========================================================= */
 
     ul {
-      margin-top: 8px;
-      margin-bottom: 0;
-
-      padding-left: 22px;
+      margin: 8px 0 22px 24px;
+      padding: 0;
     }
 
     li {
+      margin: 0 0 8px;
+    }
+
+    a {
+      color: #0645ad;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #5a3696;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.95em;
+      background: #f4f1e8;
+      padding: 1px 4px;
+    }
+
+    .subtitle {
+      color: #444;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .contact {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .nav {
+      margin-top: 24px;
+      font-size: 16px;
+    }
+
+    .nav a {
+      margin-right: 16px;
+    }
+
+    .summary {
+      font-size: 21px;
+      line-height: 1.52;
+      color: #222;
+      max-width: 780px;
+    }
+
+    .meta {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .small {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .compact-list li {
       margin-bottom: 5px;
     }
 
-    li:last-child {
-      margin-bottom: 0;
+    .two-col {
+      columns: 2;
+      column-gap: 42px;
     }
 
-    /* =========================================================
-       SKILLS
-       ========================================================= */
-
-    .skills-list {
-      list-style: none;
-      padding-left: 0;
+    .project-title {
+      margin-bottom: 2px;
     }
-
-    .skills-list li {
-      margin-bottom: 7px;
-    }
-
-    .skills-list strong {
-      font-weight: 650;
-    }
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-
-    .contact-section p {
-      margin-bottom: 7px;
-    }
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
 
     footer {
-      margin-top: 46px;
-
+      margin-top: 58px;
       padding-top: 18px;
-
-      border-top: 1px solid var(--border);
-
-      color: var(--light);
-
-      font-size: 0.84rem;
+      border-top: 1px solid #ddd8cc;
+      color: #666;
+      font-size: 15px;
     }
 
-    /* =========================================================
-       MOBILE
-       ========================================================= */
+    @media (max-width: 700px) {
+      body {
+        font-size: 17px;
+      }
 
-    @media (max-width: 600px) {
-      .container {
-        width: calc(100% - 30px);
-
-        padding-top: 35px;
-        padding-bottom: 50px;
+      .page {
+        padding: 30px 18px 56px;
       }
 
       h1 {
-        font-size: 1.7rem;
+        font-size: 34px;
       }
 
-      nav {
-        column-gap: 13px;
+      .summary {
+        font-size: 19px;
       }
 
-      section {
-        margin-bottom: 34px;
+      .two-col {
+        columns: 1;
       }
 
-      .entry {
-        margin-bottom: 24px;
-      }
-    }
-
-    /* =========================================================
-       PRINT
-       ========================================================= */
-
-    @media print {
-      body {
-        font-size: 12px;
-      }
-
-      .container {
-        max-width: none;
-        width: 100%;
-
-        padding: 0;
-      }
-
-      nav {
-        display: none;
-      }
-
-      a {
-        color: var(--text);
+      .nav a {
+        display: inline-block;
+        margin-bottom: 6px;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <main class="container">
-
-    <!-- =======================================================
-         HEADER
-         ======================================================= -->
+  <div class="page">
 
     <header>
       <h1>Adam Abou Zeid</h1>
+      <p class="subtitle">Software Engineering · AI &amp; LLM Systems</p>
 
-      <p class="specialty">
-        Software Engineering · AI &amp; LLM Systems
-      </p>
-
-      <p class="contact-line">
+      <p class="contact">
         <a href="mailto:adamabouzeid04@gmail.com">
           adamabouzeid04@gmail.com
-        </a>
+        </a><br>
 
-        &nbsp;/&nbsp;
-
-        <a
-          href="https://www.linkedin.com/in/adamabzd/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.linkedin.com/in/adamabzd/">
           LinkedIn
         </a>
 
         &nbsp;/&nbsp;
 
-        <a
-          href="https://github.com/adam-abouzeid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/adam-abouzeid">
           GitHub
+        </a>
+
+        &nbsp;/&nbsp;
+
+        <a href="https://adamabouzeid.com">
+          Portfolio
         </a>
       </p>
 
-      <!-- =====================================================
-           NAVIGATION
-           ===================================================== -->
-
-      <nav aria-label="Main navigation">
+      <p class="nav">
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
-        <a href="#leadership">Leadership &amp; Awards</a>
-        <a href="#interests">Interests</a>
+        <a href="#awards">Leadership &amp; Awards</a>
         <a href="#contact">Contact</a>
-      </nav>
+      </p>
     </header>
 
 
-    <!-- =======================================================
-         INTRO
-         ======================================================= -->
+    <main>
 
-    <div class="intro">
-      <p>
-        I build production software and AI systems across web, mobile,
-        and backend infrastructure, with a particular interest in large
-        language models, retrieval-augmented generation, AI agents,
-        knowledge systems, and end-to-end SaaS products. I have worked
-        on financial intelligence systems, private-capital research
-        workflows, business management platforms, AI assistants, and
-        operational software used to digitize real-world organizations.
-        I enjoy taking products from an initial idea through architecture,
-        implementation, deployment, and iteration.
+      <p class="summary">
+        I build production software across web, mobile, backend, and AI systems,
+        with a focus on LLM applications, retrieval, agentic workflows, and
+        end-to-end SaaS products. I enjoy taking software from an initial idea
+        through architecture, implementation, deployment, and real-world use.
       </p>
-    </div>
 
 
-    <!-- =======================================================
-         WORK
-         ======================================================= -->
+      <!-- =====================================================
+           WORK
+           ===================================================== -->
 
-    <section id="work">
-      <h2>Work</h2>
+      <h2 id="work">Work</h2>
 
 
-      <!-- MAW3AD -->
-
-      <article class="entry">
-        <h3>Maw3ad — Founder &amp; Software Engineer</h3>
-
-        <div class="entry-meta">
-          Beirut, Lebanon · May 2026 to Present
-        </div>
-
-        <ul>
-          <li>
-            Co-founded and built Maw3ad, a software platform for beauty
-            and wellness businesses to manage their day-to-day operations.
-          </li>
-
-          <li>
-            Developed a complete appointment management system covering
-            bookings, professionals, services, schedules, availability,
-            calendars, and business-specific booking rules.
-          </li>
-
-          <li>
-            Built point-of-sale and operational functionality including
-            sales, inventory, staff management, business administration,
-            and subscription-based access.
-          </li>
-
-          <li>
-            Developed the platform across mobile, web, backend, and
-            database infrastructure using React Native, Next.js, NestJS,
-            and PostgreSQL.
-          </li>
-
-          <li>
-            Work in a two-person founding team, taking direct ownership
-            over large parts of product engineering, architecture,
-            deployment, debugging, and product iteration.
-          </li>
-
-          <li>
-            Shipped the product to real businesses and continue to iterate
-            based on operational requirements and user feedback.
-          </li>
-        </ul>
-      </article>
-
-
-      <!-- SOAL LABS -->
-
-      <article class="entry">
-        <h3>Soal Labs — Software Engineer</h3>
-
-        <div class="entry-meta">
-          Remote, United States · June 2024 to April 2026
-        </div>
-
-        <ul>
-          <li>
-            Built production B2B and B2C software across frontend,
-            backend, authentication, databases, APIs, and AI systems.
-          </li>
-
-          <li>
-            Worked on an AI-powered B2B financial intelligence product
-            where businesses could connect internal data sources and
-            construct searchable organizational knowledge bases.
-          </li>
-
-          <li>
-            Developed systems for identifying and structuring financial
-            metrics from business data and making that information
-            accessible through conversational LLM interfaces.
-          </li>
-
-          <li>
-            Built AI workflows that allowed users to ask financial
-            questions and perform analysis across company knowledge
-            through retrieval and LLM-based reasoning.
-          </li>
-
-          <li>
-            Worked on a private-capital platform for managing prospective
-            deals, documents, research, and investment analysis.
-          </li>
-
-          <li>
-            Integrated Chunkr-based document processing and developed
-            semantic search and retrieval systems using embeddings.
-          </li>
-
-          <li>
-            Built RAG and conversational interfaces for querying deal
-            documents and structured investment information.
-          </li>
-
-          <li>
-            Developed automated deep-research workflows that gathered and
-            processed information relevant to new investment opportunities,
-            reducing manual work in the deal-analysis pipeline.
-          </li>
-
-          <li>
-            Built AI-agent and application workflows using Python,
-            FastAPI, React, Next.js, LangGraph, Auth0, and LLM APIs.
-          </li>
-        </ul>
-      </article>
-
-
-      <!-- FREELANCE -->
-
-      <article class="entry">
-        <h3>Independent — Freelance Software Engineer</h3>
-
-        <div class="entry-meta">
-          Remote · 2021 to Present · Part-time
-        </div>
-
-        <p>
-          I have worked on independent software projects alongside school,
-          university, and professional work since 2021.
-        </p>
-
-        <ul>
-          <li>
-            Built an end-to-end operational platform for a diversified
-            manufacturing business in Côte d'Ivoire.
-          </li>
-
-          <li>
-            Built Krypteia, a mobile AI educational assistant using RAG,
-            OpenAI APIs, React Native, NestJS, and PostgreSQL.
-          </li>
-
-          <li>
-            Developed a management platform for Axiom Energy Partners.
-          </li>
-
-          <li>
-            Built client websites for Sales Falcons and BAE Bakeries.
-          </li>
-
-          <li>
-            Built Surveyor while still in high school for a group of
-            engineering students at the American University of Beirut.
-            The submitted project received a grade of 95/100.
-          </li>
-        </ul>
-      </article>
-
-
-      <!-- FINTECH -->
-
-      <article class="entry">
-        <h3>UK Fintech Company — External Software Engineer</h3>
-
-        <div class="entry-meta">
-          Remote, United Kingdom · December 2024 to January 2025
-        </div>
-
-        <p>
-          Worked as an external software engineer within a fintech
-          engineering team, developing and shipping production features
-          for an existing financial technology platform.
-        </p>
-      </article>
-
-
-      <!-- ETE -->
-
-      <article class="entry">
-        <h3>ETE Services — Software Engineer</h3>
-
-        <div class="entry-meta">
-          Remote, Lebanon · May 2023 to July 2023
-        </div>
-
-        <ul>
-          <li>
-            Led development of a headless content management system using
-            the MERN stack.
-          </li>
-
-          <li>
-            Built a React-based drag-and-drop editing interface designed
-            to make content management more accessible to non-technical
-            users.
-          </li>
-        </ul>
-      </article>
-
-
-      <article class="entry">
-        <h3>ETE Services — Full-Stack Engineer Intern</h3>
-
-        <div class="entry-meta">
-          Remote, Lebanon · December 2022 to January 2023
-        </div>
-
-        <p>
-          Designed and implemented an employee management solution using
-          MongoDB, Express.js, React, Node.js, and React Native, while
-          working with services including AWS and Cloudinary.
-        </p>
-      </article>
-
-
-      <!-- LAU -->
-
-      <article class="entry">
-        <h3>
-          Lebanese American University — Computer Center Administrator
-        </h3>
-
-        <div class="entry-meta">
-          Beirut, Lebanon · September 2023 to January 2024
-        </div>
-
-        <p>
-          Provided technical support to students and university systems,
-          troubleshot hardware and software issues, helped maintain
-          computer-center operations, developed the LAU Libraries webpage,
-          and managed campus display systems used for university events.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>
-          Lebanese American University — Teaching Assistant, CSC243
-        </h3>
-
-        <div class="entry-meta">
-          Beirut, Lebanon · January 2023 to May 2023
-        </div>
-
-        <p>
-          Supported Introduction to Object-Oriented Programming laboratory
-          sessions, maintained lab computers, debugged student code, and
-          guided students through Python programming and problem-solving.
-        </p>
-      </article>
-    </section>
-
-
-    <!-- =======================================================
-         PROJECTS
-         ======================================================= -->
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-
-      <!-- MANUFACTURING PLATFORM -->
-
-      <article class="entry">
-        <h3>Manufacturing Operations Platform</h3>
-
-        <p>
-          Built a full operational system for a diversified manufacturing
-          business in Côte d'Ivoire producing products across food and
-          plastics, including pasta, condensed milk, tomato paste, and
-          plastic goods.
-        </p>
-
-        <p>
-          The platform digitizes workflows across a large portion of the
-          company's operational pipeline, including:
-        </p>
-
-        <ul>
-          <li>Raw-material ordering and procurement.</li>
-          <li>Production logging and manufacturing records.</li>
-          <li>Inventory and stock management.</li>
-          <li>Client management.</li>
-          <li>Sales and order workflows.</li>
-          <li>Financial operations.</li>
-          <li>Administrative processes.</li>
-        </ul>
-
-        <p>
-          Developed the system using React Native, Next.js, NestJS, and
-          PostgreSQL, with the goal of replacing fragmented manual
-          processes with a centralized operational platform.
-        </p>
-      </article>
-
-
-      <!-- KRYPTEIA -->
-
-      <article class="entry">
-        <h3>Krypteia — AI Educational Assistant</h3>
-
-        <p>
-          Built a mobile-first AI educational application that provides
-          users with an AI assistant capable of answering questions using
-          application-specific educational content.
-        </p>
-
-        <ul>
-          <li>
-            Implemented retrieval-augmented generation to provide the
-            language model with relevant application knowledge.
-          </li>
-
-          <li>
-            Integrated OpenAI APIs for conversational AI functionality.
-          </li>
-
-          <li>
-            Built the mobile application in React Native.
-          </li>
-
-          <li>
-            Developed backend services using NestJS and PostgreSQL.
-          </li>
-        </ul>
-      </article>
-
-
-      <!-- MAW3AD -->
-
-      <article class="entry">
-        <h3>Maw3ad</h3>
-
-        <p>
-          A SaaS platform designed for beauty and wellness businesses,
-          combining appointment booking, business operations, POS,
-          inventory, employee management, and subscriptions across mobile
-          and web applications.
-        </p>
-
-        <p>
-          Maw3ad is also one of my main exercises in building and operating
-          a complete product rather than an isolated technical project:
-          product decisions, backend architecture, mobile development,
-          frontend development, database design, deployment, application
-          distribution, billing, and ongoing customer-driven iteration.
-        </p>
-      </article>
-
-
-      <!-- LABA3ED -->
-
-      <article class="entry">
-        <h3>Laba3ed</h3>
-
-        <p>
-          Founded Laba3ed during wartime displacement in Lebanon as a
-          platform for connecting people requesting assistance with people
-          able to provide it.
-        </p>
-
-        <ul>
-          <li>
-            Helped fulfill hundreds of requests through the platform.
-          </li>
-
-          <li>
-            Designed the project around rapidly connecting people in need
-            with potential donors and helpers.
-          </li>
-
-          <li>
-            The initiative received national media coverage and I was
-            interviewed about it on national television twice.
-          </li>
-        </ul>
-      </article>
-
-
-      <!-- REVIEWAI -->
-
-      <article class="entry">
-        <h3>ReviewAI</h3>
-
-        <p>
-          Built ReviewAI during a hackathon as an AI-assisted developer
-          tool for analyzing and summarizing GitHub pull requests.
-        </p>
-
-        <ul>
-          <li>
-            Integrated the GitHub API to retrieve pull-request information.
-          </li>
-
-          <li>
-            Used Google Gemini to interpret changes and produce concise,
-            useful summaries.
-          </li>
-
-          <li>
-            Explored how LLMs could reduce the amount of time required to
-            understand code changes during review.
-          </li>
-        </ul>
-      </article>
-
-
-      <!-- ONE HAND -->
-
-      <article class="entry">
-        <h3>One Hand</h3>
-
-        <p>
-          Built a donation-focused Android application using Java, XML,
-          and Firebase for an LAU mobile-development competition.
-        </p>
-
-        <p>
-          The project placed first in the competition and resulted in a
-          30% undergraduate scholarship.
-        </p>
-      </article>
-
-
-      <!-- SURVEYOR -->
-
-      <article class="entry">
-        <h3>Surveyor</h3>
-
-        <p>
-          My first freelance software project, built during Grade 11 for a
-          group of engineering students at the American University of
-          Beirut.
-        </p>
-
-        <p>
-          Developed a Django-based platform designed to improve
-          instructor-student interaction through surveys and gamified
-          participation. The final submitted project received 95/100.
-        </p>
-      </article>
-
-
-      <!-- AXIOM / SMALLER CLIENT PROJECTS -->
-
-      <article class="entry">
-        <h3>Client Web Platforms</h3>
-
-        <ul>
-          <li>
-            Developed a management platform for Axiom Energy Partners.
-          </li>
-
-          <li>
-            Designed and developed a website for Sales Falcons.
-          </li>
-
-          <li>
-            Designed and developed a website for BAE Bakeries.
-          </li>
-        </ul>
-      </article>
-    </section>
-
-
-    <!-- =======================================================
-         EDUCATION
-         ======================================================= -->
-
-    <section id="education">
-      <h2>Education</h2>
-
-
-      <!-- ECOLE POLYTECHNIQUE -->
-
-      <article class="entry">
-        <h3>École Polytechnique (L'X)</h3>
-
-        <div class="entry-meta">
-          Palaiseau, France · September 2026 to June 2028
-        </div>
-
-        <p>
-          MSc&amp;T in Large Language Models, Graphs and Applications
-          (LLGA).
-        </p>
-
-        <p>
-          <strong>France Excellence Eiffel Scholar.</strong>
-          Awarded the France Excellence Eiffel Scholarship for graduate
-          study in France.
-        </p>
-      </article>
-
-
-      <!-- LAU -->
-
-      <article class="entry">
-        <h3>Lebanese American University</h3>
-
-        <div class="entry-meta">
-          Beirut, Lebanon · September 2022 to June 2025
-        </div>
-
-        <p>
-          Bachelor of Science in Computer Science.
-        </p>
-
-        <ul>
-          <li>
-            Graduated with <strong>High Distinction</strong>.
-          </li>
-
-          <li>
-            Final cumulative GPA:
-            <strong>3.98 / 4.00</strong>.
-          </li>
-
-          <li>
-            <strong>MEPI Tomorrow's Leaders Scholar.</strong>
-          </li>
-        </ul>
-      </article>
-    </section>
-
-
-    <!-- =======================================================
-         TECHNICAL SKILLS
-         ======================================================= -->
-
-    <section id="skills">
-      <h2>Technical Skills</h2>
-
-      <ul class="skills-list">
-
-        <li>
-          <strong>Languages:</strong>
-          Python, TypeScript, JavaScript, Java, C, SQL
-        </li>
-
-        <li>
-          <strong>AI / LLM:</strong>
-          retrieval-augmented generation (RAG), LangGraph, LangChain,
-          OpenAI APIs, Gemini API, embeddings, semantic search,
-          knowledge bases, LLM agents, AI workflows, deep research
-        </li>
-
-        <li>
-          <strong>Frontend:</strong>
-          React, Next.js, HTML, CSS, JavaScript, TypeScript
-        </li>
-
-        <li>
-          <strong>Mobile:</strong>
-          React Native
-        </li>
-
-        <li>
-          <strong>Backend:</strong>
-          NestJS, FastAPI, Node.js, Express.js, Django
-        </li>
-
-        <li>
-          <strong>Databases:</strong>
-          PostgreSQL, MongoDB, SQL
-        </li>
-
-        <li>
-          <strong>Infrastructure / Tools:</strong>
-          Git, GitHub, Docker, Linux, AWS, Microsoft Azure, Auth0,
-          Cloudinary
-        </li>
-
-        <li>
-          <strong>Product Engineering:</strong>
-          SaaS architecture, REST APIs, authentication, mobile and web
-          applications, subscription systems, business management
-          software, production debugging and deployment
-        </li>
-      </ul>
-    </section>
-
-
-    <!-- =======================================================
-         LEADERSHIP AND AWARDS
-         ======================================================= -->
-
-    <section id="leadership">
-      <h2>Leadership &amp; Awards</h2>
-
-      <article class="entry">
-        <h3>France Excellence Eiffel Scholarship</h3>
-
-        <p>
-          Selected as a France Excellence Eiffel Scholar for graduate
-          study at École Polytechnique.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>MEPI Tomorrow's Leaders Scholar</h3>
-
-        <p>
-          Completed my undergraduate Computer Science degree at Lebanese
-          American University as a MEPI Tomorrow's Leaders Scholar.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>Vice President — LAU Computer Science Club</h3>
-
-        <p>
-          Served as Vice President of the Lebanese American University
-          Computer Science Club.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>Lebanese Collegiate Programming Contest</h3>
-
-        <p>
-          Two-time participant in the Lebanese Collegiate Programming
-          Contest, including an Honorable Mention.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>1st Place — Android Mobile Development Competition</h3>
-
-        <p>
-          Placed first with One Hand, an Android donation application,
-          resulting in a 30% undergraduate scholarship.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>3rd Place — Web Development Hackathon</h3>
-
-        <p>
-          Placed third in a web-development hackathon hosted by
-          Rafik Hariri University among approximately 200 contestants.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>3rd Place — Algorithms Competition</h3>
-
-        <p>
-          Placed third in an algorithms competition hosted by Beirut
-          Lambda Hackerspace.
-        </p>
-      </article>
-
-
-      <article class="entry">
-        <h3>Laba3ed</h3>
-
-        <p>
-          Founded a social-impact initiative that fulfilled hundreds of
-          aid requests during wartime displacement and was featured in
-          two national television interviews.
-        </p>
-      </article>
-    </section>
-
-
-    <!-- =======================================================
-         INTERESTS
-         Mirrors the simple Interests section of the reference site.
-         ======================================================= -->
-
-    <section id="interests">
-      <h2>Interests</h2>
+      <h3>Maw3ad — Founder &amp; Software Engineer</h3>
+      <p class="meta">Beirut, Lebanon · May 2026 to Present</p>
 
       <ul>
-        <li>Large language model systems</li>
-        <li>AI agents and agentic workflows</li>
-        <li>Retrieval-augmented generation</li>
-        <li>Knowledge retrieval and semantic search</li>
-        <li>AI-native software products</li>
-        <li>SaaS architecture</li>
-        <li>Full-stack product engineering</li>
-        <li>Mobile application development</li>
-        <li>Developer tooling</li>
-        <li>Entrepreneurship and product building</li>
+        <li>
+          Co-founded and built Maw3ad, a SaaS platform for beauty and wellness
+          businesses to manage appointments, point-of-sale operations, staff,
+          inventory, and subscriptions.
+        </li>
+
+        <li>
+          Built the mobile application, web platform, backend services, and
+          database using React Native, Next.js, NestJS, and PostgreSQL.
+        </li>
+
+        <li>
+          Work in a two-person founding team and contribute across product
+          design, architecture, development, deployment, debugging, and
+          customer-driven iteration.
+        </li>
       </ul>
-    </section>
 
 
-    <!-- =======================================================
-         CONTACT
-         ======================================================= -->
+      <h3>Independent — Freelance Software Engineer</h3>
+      <p class="meta">Remote · 2021 to Present · Part-time</p>
 
-    <section id="contact" class="contact-section">
-      <h2>Contact</h2>
+      <ul>
+        <li>
+          Built an end-to-end operations platform for a diversified
+          manufacturing business in Côte d'Ivoire, covering procurement,
+          production, inventory, clients, sales, finance, and administration.
+        </li>
+
+        <li>
+          Built Krypteia, a RAG-based AI educational application using
+          React Native, NestJS, PostgreSQL, and OpenAI APIs.
+        </li>
+
+        <li>
+          Developed a management platform for Axiom Energy Partners and
+          websites for Sales Falcons and BAE Bakeries.
+        </li>
+
+        <li>
+          Built Surveyor while in Grade 11 for AUB engineering students;
+          the submitted project received 95/100.
+        </li>
+      </ul>
+
+
+      <h3>Soal Labs — Software Engineer</h3>
+      <p class="meta">Remote, United States · June 2024 to April 2026</p>
+
+      <ul>
+        <li>
+          Built an AI-powered B2B financial intelligence platform that
+          connected business data sources, constructed knowledge bases,
+          extracted financial information, and enabled conversational analysis.
+        </li>
+
+        <li>
+          Worked on private-capital software for managing deals, documents,
+          research, and investment workflows.
+        </li>
+
+        <li>
+          Integrated Chunkr-based document processing and built semantic search,
+          retrieval, and RAG workflows using embeddings and LLMs.
+        </li>
+
+        <li>
+          Developed automated deep-research pipelines for gathering and
+          processing information around prospective investment opportunities.
+        </li>
+
+        <li>
+          Built production software and agentic AI systems using Python,
+          FastAPI, React, Next.js, LangGraph, Auth0, and LLM APIs.
+        </li>
+      </ul>
+
+
+      <h3>UK Fintech Company — External Software Engineer</h3>
+      <p class="meta">Remote, United Kingdom · December 2024 to January 2025</p>
 
       <p>
-        For software engineering, AI, research, freelance work, or
-        project discussions, contact me at
+        Worked within an external engineering team to develop and ship
+        production features for an established financial technology platform.
+      </p>
+
+
+      <h3>ETE Services — Software Engineer</h3>
+      <p class="meta">Remote, Lebanon · May 2023 to July 2023</p>
+
+      <ul>
+        <li>
+          Led development of a headless content management system using
+          MongoDB, Express.js, React, and Node.js.
+        </li>
+
+        <li>
+          Built a React drag-and-drop interface for easier content management.
+        </li>
+      </ul>
+
+
+      <h3>ETE Services — Full-Stack Engineer Intern</h3>
+      <p class="meta">Remote, Lebanon · December 2022 to January 2023</p>
+
+      <p>
+        Built an employee management system using the MERN stack and React
+        Native, with AWS and Cloudinary used for supporting infrastructure.
+      </p>
+
+
+      <h3>Lebanese American University — Computer Center Administrator</h3>
+      <p class="meta">Beirut, Lebanon · September 2023 to January 2024</p>
+
+      <p>
+        Provided technical support to students and university systems,
+        helped maintain computer-center infrastructure, developed the LAU
+        Libraries webpage, and managed campus display screens.
+      </p>
+
+
+      <h3>Lebanese American University — Teaching Assistant</h3>
+      <p class="meta">CSC243: Introduction to Object-Oriented Programming · January 2023 to May 2023</p>
+
+      <p>
+        Supported programming laboratory sessions, maintained lab computers,
+        debugged student code, and guided students through Python and
+        object-oriented programming problems.
+      </p>
+
+
+
+      <!-- =====================================================
+           PROJECTS
+           ===================================================== -->
+
+      <h2 id="projects">Projects</h2>
+
+
+      <h3 class="project-title">Manufacturing Operations Platform</h3>
+
+      <p>
+        Built an operations platform for a diversified manufacturing company
+        in Côte d'Ivoire producing products including pasta, condensed milk,
+        tomato paste, and plastic goods.
+      </p>
+
+      <p>
+        The system digitizes workflows from raw-material procurement and
+        production logging through inventory, client management, sales,
+        finance, and administrative operations.
+      </p>
+
+      <p>
+        Built using React Native, Next.js, NestJS, and PostgreSQL.
+      </p>
+
+
+      <h3 class="project-title">Krypteia</h3>
+
+      <p>
+        Built a mobile AI educational assistant using React Native and NestJS,
+        with retrieval-augmented generation and OpenAI APIs for conversational
+        access to educational content.
+      </p>
+
+
+      <h3 class="project-title">Laba3ed</h3>
+
+      <p>
+        Founded an aid-matching platform during wartime displacement in
+        Lebanon to connect people requesting assistance with potential donors.
+        The platform fulfilled hundreds of requests and I was interviewed
+        about the initiative twice on national television.
+      </p>
+
+
+      <h3 class="project-title">ReviewAI</h3>
+
+      <p>
+        Built a hackathon project using the GitHub API and Google Gemini to
+        analyze pull requests and generate concise summaries of code changes
+        for reviewers.
+      </p>
+
+
+      <h3 class="project-title">Surveyor</h3>
+
+      <p>
+        Built a Django-based surveying platform while in Grade 11 for a group
+        of engineering students at the American University of Beirut. The
+        final submitted project received 95/100.
+      </p>
+
+
+      <h3 class="project-title">One Hand</h3>
+
+      <p>
+        Built an Android donation application using Java, XML, and Firebase.
+        The project placed first in an LAU Android development competition
+        and resulted in a 30% undergraduate scholarship.
+      </p>
+
+
+      <h3 class="project-title">Client Platforms</h3>
+
+      <p>
+        Developed a management platform for Axiom Energy Partners and
+        websites for Sales Falcons and BAE Bakeries.
+      </p>
+
+
+
+      <!-- =====================================================
+           EDUCATION
+           ===================================================== -->
+
+      <h2 id="education">Education</h2>
+
+
+      <h3>École Polytechnique (L'X)</h3>
+      <p class="meta">Palaiseau, France · September 2026 to June 2028</p>
+
+      <p>
+        MSc&amp;T in Large Language Models, Graphs and Applications (LLGA).
+      </p>
+
+      <p>
+        France Excellence Eiffel Scholar.
+      </p>
+
+
+      <h3>Lebanese American University</h3>
+      <p class="meta">Beirut, Lebanon · September 2022 to June 2025</p>
+
+      <p>
+        Bachelor of Science in Computer Science.<br>
+        High Distinction · GPA: 3.98/4.00.<br>
+        MEPI Tomorrow's Leaders Scholar.
+      </p>
+
+
+
+      <!-- =====================================================
+           TECHNICAL SKILLS
+           ===================================================== -->
+
+      <h2 id="skills">Technical Skills</h2>
+
+      <ul class="compact-list two-col">
+        <li>Python</li>
+        <li>TypeScript</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>C</li>
+        <li>SQL</li>
+        <li>React</li>
+        <li>React Native</li>
+        <li>Next.js</li>
+        <li>NestJS</li>
+        <li>FastAPI</li>
+        <li>Node.js</li>
+        <li>Django</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>RAG</li>
+        <li>LangGraph</li>
+        <li>LangChain</li>
+        <li>OpenAI API</li>
+        <li>Gemini API</li>
+        <li>Embeddings</li>
+        <li>Semantic Search</li>
+        <li>LLM Agents</li>
+        <li>Docker</li>
+        <li>Git and GitHub</li>
+        <li>Linux</li>
+        <li>AWS</li>
+        <li>Microsoft Azure</li>
+        <li>Auth0</li>
+      </ul>
+
+
+
+      <!-- =====================================================
+           LEADERSHIP AND AWARDS
+           ===================================================== -->
+
+      <h2 id="awards">Leadership &amp; Awards</h2>
+
+      <ul class="compact-list">
+        <li>
+          France Excellence Eiffel Scholar — École Polytechnique.
+        </li>
+
+        <li>
+          MEPI Tomorrow's Leaders Scholar — Lebanese American University.
+        </li>
+
+        <li>
+          Vice President — Lebanese American University Computer Science Club.
+        </li>
+
+        <li>
+          Founder — Laba3ed; fulfilled hundreds of requests and featured in
+          two national television interviews.
+        </li>
+
+        <li>
+          1st Place — LAU Android Mobile Development Competition for
+          One Hand; awarded a 30% undergraduate scholarship.
+        </li>
+
+        <li>
+          Lebanese Collegiate Programming Contest — two-time participant
+          and Honorable Mention.
+        </li>
+
+        <li>
+          3rd Place — Web Development Hackathon among approximately
+          200 contestants.
+        </li>
+
+        <li>
+          3rd Place — Algorithms Competition, Beirut Lambda Hackerspace.
+        </li>
+      </ul>
+
+
+
+      <!-- =====================================================
+           INTERESTS
+           ===================================================== -->
+
+      <h2>Interests</h2>
+
+      <ul class="compact-list">
+        <li>Large language models</li>
+        <li>Agentic AI systems</li>
+        <li>Retrieval-augmented generation</li>
+        <li>AI-native software products</li>
+        <li>SaaS and product engineering</li>
+        <li>Full-stack systems</li>
+        <li>Entrepreneurship</li>
+      </ul>
+
+
+
+      <!-- =====================================================
+           CONTACT
+           ===================================================== -->
+
+      <h2 id="contact">Contact</h2>
+
+      <p>
+        For work, research, freelance, or project discussions, contact me at
         <a href="mailto:adamabouzeid04@gmail.com">
           adamabouzeid04@gmail.com
         </a>.
       </p>
 
-      <p>
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/adamabzd/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          linkedin.com/in/adamabzd
-        </a>
-      </p>
+    </main>
 
-      <p>
-        GitHub:
-        <a
-          href="https://github.com/adam-abouzeid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github.com/adam-abouzeid
-        </a>
-      </p>
-    </section>
-
-
-    <!-- =======================================================
-         FOOTER
-         ======================================================= -->
 
     <footer>
       Last updated: 2026-08-15.
     </footer>
 
-  </main>
-
+  </div>
 </body>
 </html>
