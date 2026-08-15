@@ -19,6 +19,7 @@
       max-width: 840px;
       margin: 0 auto;
       padding: 42px 24px 70px;
+      position: relative;
     }
 
     header {
@@ -137,6 +138,45 @@
       font-size: 15px;
     }
 
+    /* ---------- LANGUAGE TOGGLE ---------- */
+
+    .language-toggle {
+      position: absolute;
+      top: 42px;
+      right: 24px;
+
+      display: flex;
+      align-items: center;
+
+      border: 1px solid #ccc7bb;
+      border-radius: 4px;
+      overflow: hidden;
+
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 14px;
+    }
+
+    .language-toggle button {
+      border: 0;
+      margin: 0;
+      padding: 6px 9px;
+
+      background: transparent;
+      color: #555;
+
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .language-toggle button:hover {
+      background: #f4f1e8;
+    }
+
+    .language-toggle button.active {
+      background: #111;
+      color: #fffffb;
+    }
+
     @media (max-width: 700px) {
       body {
         font-size: 17px;
@@ -148,6 +188,7 @@
 
       h1 {
         font-size: 34px;
+        padding-right: 80px;
       }
 
       .summary {
@@ -162,21 +203,52 @@
         display: inline-block;
         margin-bottom: 6px;
       }
+
+      .language-toggle {
+        top: 30px;
+        right: 18px;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="page">
 
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-toggle">
+      <button id="btn-en" class="active" onclick="setLanguage('en')">
+        EN
+      </button>
+
+      <button id="btn-fr" onclick="setLanguage('fr')">
+        FR
+      </button>
+    </div>
+
+
     <header>
+
       <h1>Adam Abou Zeid</h1>
-      <p class="subtitle">Software Engineering · AI &amp; LLM Systems</p>
+
+      <p
+        class="subtitle"
+        data-en="Software Engineering · AI &amp; LLM Systems"
+        data-fr="Génie logiciel · IA &amp; systèmes LLM"
+      >
+        Software Engineering · AI &amp; LLM Systems
+      </p>
+
 
       <p class="contact">
+
         <a href="mailto:adamabouzeid04@gmail.com">
           adamabouzeid04@gmail.com
-        </a><br>
+        </a>
+
+        <br>
 
         <a href="https://www.linkedin.com/in/adamabzd/">
           LinkedIn
@@ -193,22 +265,74 @@
         <a href="https://adamabouzeid.com">
           Portfolio
         </a>
+
       </p>
 
+
       <p class="nav">
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#awards">Leadership &amp; Awards</a>
-        <a href="#contact">Contact</a>
+
+        <a
+          href="#work"
+          data-en="Work"
+          data-fr="Expérience"
+        >
+          Work
+        </a>
+
+        <a
+          href="#projects"
+          data-en="Projects"
+          data-fr="Projets"
+        >
+          Projects
+        </a>
+
+        <a
+          href="#education"
+          data-en="Education"
+          data-fr="Formation"
+        >
+          Education
+        </a>
+
+        <a
+          href="#skills"
+          data-en="Skills"
+          data-fr="Compétences"
+        >
+          Skills
+        </a>
+
+        <a
+          href="#awards"
+          data-en="Leadership &amp; Awards"
+          data-fr="Leadership &amp; distinctions"
+        >
+          Leadership &amp; Awards
+        </a>
+
+        <a
+          href="#contact"
+          data-en="Contact"
+          data-fr="Contact"
+        >
+          Contact
+        </a>
+
       </p>
+
     </header>
 
 
     <main>
 
-      <p class="summary">
+      <!-- SUMMARY -->
+
+      <p
+        class="summary"
+        data-en="I build production software across web, mobile, backend, and AI systems, with a focus on LLM applications, retrieval, agentic workflows, and end-to-end SaaS products. I enjoy taking software from an initial idea through architecture, implementation, deployment, and real-world use."
+        data-fr="Je développe des logiciels de production sur le web, le mobile, le backend et les systèmes d’intelligence artificielle, avec un intérêt particulier pour les applications basées sur les LLM, la recherche d’information, les workflows agentiques et les produits SaaS de bout en bout. J’aime transformer une idée initiale en un produit complet, depuis l’architecture jusqu’au déploiement et à son utilisation réelle."
+      >
         I build production software across web, mobile, backend, and AI systems,
         with a focus on LLM applications, retrieval, agentic workflows, and
         end-to-end SaaS products. I enjoy taking software from an initial idea
@@ -216,142 +340,322 @@
       </p>
 
 
+
       <!-- =====================================================
            WORK
            ===================================================== -->
 
-      <h2 id="work">Work</h2>
+      <h2
+        id="work"
+        data-en="Work"
+        data-fr="Expérience"
+      >
+        Work
+      </h2>
 
 
-      <h3>Maw3ad — Founder &amp; Software Engineer</h3>
-      <p class="meta">Beirut, Lebanon · May 2026 to Present</p>
+      <!-- MAW3AD -->
+
+      <h3
+        data-en="Maw3ad — Founder &amp; Software Engineer"
+        data-fr="Maw3ad — Fondateur &amp; ingénieur logiciel"
+      >
+        Maw3ad — Founder &amp; Software Engineer
+      </h3>
+
+      <p
+        class="meta"
+        data-en="Beirut, Lebanon · May 2026 to Present"
+        data-fr="Beyrouth, Liban · Mai 2026 à aujourd’hui"
+      >
+        Beirut, Lebanon · May 2026 to Present
+      </p>
+
 
       <ul>
-        <li>
+
+        <li
+          data-en="Co-founded and built Maw3ad, a SaaS platform for beauty and wellness businesses to manage appointments, point-of-sale operations, staff, inventory, and subscriptions."
+          data-fr="Cofondation et développement de Maw3ad, une plateforme SaaS destinée aux entreprises de beauté et de bien-être pour gérer les rendez-vous, le point de vente, les employés, l’inventaire et les abonnements."
+        >
           Co-founded and built Maw3ad, a SaaS platform for beauty and wellness
           businesses to manage appointments, point-of-sale operations, staff,
           inventory, and subscriptions.
         </li>
 
-        <li>
+
+        <li
+          data-en="Built the mobile application, web platform, backend services, and database using React Native, Next.js, NestJS, and PostgreSQL."
+          data-fr="Développement de l’application mobile, de la plateforme web, des services backend et de la base de données avec React Native, Next.js, NestJS et PostgreSQL."
+        >
           Built the mobile application, web platform, backend services, and
           database using React Native, Next.js, NestJS, and PostgreSQL.
         </li>
 
-        <li>
+
+        <li
+          data-en="Work in a two-person founding team and contribute across product design, architecture, development, deployment, debugging, and customer-driven iteration."
+          data-fr="Travail au sein d’une équipe fondatrice de deux personnes avec une implication dans la conception produit, l’architecture, le développement, le déploiement, le débogage et les itérations basées sur les retours clients."
+        >
           Work in a two-person founding team and contribute across product
           design, architecture, development, deployment, debugging, and
           customer-driven iteration.
         </li>
+
       </ul>
 
 
-      <h3>Independent — Freelance Software Engineer</h3>
-      <p class="meta">Remote · 2021 to Present · Part-time</p>
+      <!-- FREELANCE -->
+
+      <h3
+        data-en="Independent — Freelance Software Engineer"
+        data-fr="Indépendant — Ingénieur logiciel freelance"
+      >
+        Independent — Freelance Software Engineer
+      </h3>
+
+      <p
+        class="meta"
+        data-en="Remote · 2021 to Present · Part-time"
+        data-fr="À distance · 2021 à aujourd’hui · Temps partiel"
+      >
+        Remote · 2021 to Present · Part-time
+      </p>
+
 
       <ul>
-        <li>
+
+        <li
+          data-en="Built an end-to-end operations platform for a diversified manufacturing business in Côte d'Ivoire, covering procurement, production, inventory, clients, sales, finance, and administration."
+          data-fr="Développement d’une plateforme opérationnelle de bout en bout pour une entreprise industrielle diversifiée en Côte d’Ivoire, couvrant les achats, la production, les stocks, les clients, les ventes, la finance et l’administration."
+        >
           Built an end-to-end operations platform for a diversified
           manufacturing business in Côte d'Ivoire, covering procurement,
           production, inventory, clients, sales, finance, and administration.
         </li>
 
-        <li>
+
+        <li
+          data-en="Built Krypteia, a RAG-based AI educational application using React Native, NestJS, PostgreSQL, and OpenAI APIs."
+          data-fr="Développement de Krypteia, une application éducative basée sur l’IA et le RAG utilisant React Native, NestJS, PostgreSQL et les API OpenAI."
+        >
           Built Krypteia, a RAG-based AI educational application using
           React Native, NestJS, PostgreSQL, and OpenAI APIs.
         </li>
 
-        <li>
+
+        <li
+          data-en="Developed a management platform for Axiom Energy Partners and websites for Sales Falcons and BAE Bakeries."
+          data-fr="Développement d’une plateforme de gestion pour Axiom Energy Partners ainsi que de sites web pour Sales Falcons et BAE Bakeries."
+        >
           Developed a management platform for Axiom Energy Partners and
           websites for Sales Falcons and BAE Bakeries.
         </li>
 
-        <li>
+
+        <li
+          data-en="Built Surveyor while in Grade 11 for AUB engineering students; the submitted project received 95/100."
+          data-fr="Développement de Surveyor en classe de première pour des étudiants en ingénierie de l’AUB ; le projet final a obtenu la note de 95/100."
+        >
           Built Surveyor while in Grade 11 for AUB engineering students;
           the submitted project received 95/100.
         </li>
+
       </ul>
 
 
-      <h3>Soal Labs — Software Engineer</h3>
-      <p class="meta">Remote, United States · June 2024 to April 2026</p>
+      <!-- SOAL LABS -->
+
+      <h3>
+        Soal Labs — Software Engineer
+      </h3>
+
+      <p
+        class="meta"
+        data-en="Remote, United States · June 2024 to April 2026"
+        data-fr="À distance, États-Unis · Juin 2024 à avril 2026"
+      >
+        Remote, United States · June 2024 to April 2026
+      </p>
+
 
       <ul>
-        <li>
+
+        <li
+          data-en="Built an AI-powered B2B financial intelligence platform that connected business data sources, constructed knowledge bases, extracted financial information, and enabled conversational analysis."
+          data-fr="Développement d’une plateforme B2B d’intelligence financière basée sur l’IA, permettant de connecter les sources de données des entreprises, construire des bases de connaissances, extraire des informations financières et effectuer des analyses conversationnelles."
+        >
           Built an AI-powered B2B financial intelligence platform that
           connected business data sources, constructed knowledge bases,
           extracted financial information, and enabled conversational analysis.
         </li>
 
-        <li>
+
+        <li
+          data-en="Worked on private-capital software for managing deals, documents, research, and investment workflows."
+          data-fr="Travail sur une plateforme destinée au private capital pour gérer les transactions, documents, recherches et workflows d’investissement."
+        >
           Worked on private-capital software for managing deals, documents,
           research, and investment workflows.
         </li>
 
-        <li>
+
+        <li
+          data-en="Integrated Chunkr-based document processing and built semantic search, retrieval, and RAG workflows using embeddings and LLMs."
+          data-fr="Intégration du traitement documentaire avec Chunkr et développement de recherche sémantique, de systèmes de retrieval et de workflows RAG utilisant embeddings et LLM."
+        >
           Integrated Chunkr-based document processing and built semantic search,
           retrieval, and RAG workflows using embeddings and LLMs.
         </li>
 
-        <li>
+
+        <li
+          data-en="Developed automated deep-research pipelines for gathering and processing information around prospective investment opportunities."
+          data-fr="Développement de pipelines automatisés de deep research pour collecter et traiter des informations relatives à de nouvelles opportunités d’investissement."
+        >
           Developed automated deep-research pipelines for gathering and
           processing information around prospective investment opportunities.
         </li>
 
-        <li>
+
+        <li
+          data-en="Built production software and agentic AI systems using Python, FastAPI, React, Next.js, LangGraph, Auth0, and LLM APIs."
+          data-fr="Développement de logiciels de production et de systèmes d’IA agentiques avec Python, FastAPI, React, Next.js, LangGraph, Auth0 et des API de LLM."
+        >
           Built production software and agentic AI systems using Python,
           FastAPI, React, Next.js, LangGraph, Auth0, and LLM APIs.
         </li>
+
       </ul>
 
 
-      <h3>UK Fintech Company — External Software Engineer</h3>
-      <p class="meta">Remote, United Kingdom · December 2024 to January 2025</p>
+      <!-- FINTECH -->
 
-      <p>
+      <h3
+        data-en="UK Fintech Company — External Software Engineer"
+        data-fr="Entreprise Fintech britannique — Ingénieur logiciel externe"
+      >
+        UK Fintech Company — External Software Engineer
+      </h3>
+
+      <p
+        class="meta"
+        data-en="Remote, United Kingdom · December 2024 to January 2025"
+        data-fr="À distance, Royaume-Uni · Décembre 2024 à janvier 2025"
+      >
+        Remote, United Kingdom · December 2024 to January 2025
+      </p>
+
+      <p
+        data-en="Worked within an external engineering team to develop and ship production features for an established financial technology platform."
+        data-fr="Travail au sein d’une équipe d’ingénierie externe pour développer et livrer des fonctionnalités de production sur une plateforme fintech existante."
+      >
         Worked within an external engineering team to develop and ship
         production features for an established financial technology platform.
       </p>
 
 
-      <h3>ETE Services — Software Engineer</h3>
-      <p class="meta">Remote, Lebanon · May 2023 to July 2023</p>
+      <!-- ETE -->
+
+      <h3>
+        ETE Services — Software Engineer
+      </h3>
+
+      <p
+        class="meta"
+        data-en="Remote, Lebanon · May 2023 to July 2023"
+        data-fr="À distance, Liban · Mai 2023 à juillet 2023"
+      >
+        Remote, Lebanon · May 2023 to July 2023
+      </p>
 
       <ul>
-        <li>
+
+        <li
+          data-en="Led development of a headless content management system using MongoDB, Express.js, React, and Node.js."
+          data-fr="Direction du développement d’un système de gestion de contenu headless utilisant MongoDB, Express.js, React et Node.js."
+        >
           Led development of a headless content management system using
           MongoDB, Express.js, React, and Node.js.
         </li>
 
-        <li>
+        <li
+          data-en="Built a React drag-and-drop interface for easier content management."
+          data-fr="Développement d’une interface React de type glisser-déposer pour simplifier la gestion du contenu."
+        >
           Built a React drag-and-drop interface for easier content management.
         </li>
+
       </ul>
 
 
-      <h3>ETE Services — Full-Stack Engineer Intern</h3>
-      <p class="meta">Remote, Lebanon · December 2022 to January 2023</p>
+      <h3>
+        ETE Services — Full-Stack Engineer Intern
+      </h3>
 
-      <p>
+      <p
+        class="meta"
+        data-en="Remote, Lebanon · December 2022 to January 2023"
+        data-fr="À distance, Liban · Décembre 2022 à janvier 2023"
+      >
+        Remote, Lebanon · December 2022 to January 2023
+      </p>
+
+      <p
+        data-en="Built an employee management system using the MERN stack and React Native, with AWS and Cloudinary used for supporting infrastructure."
+        data-fr="Développement d’un système de gestion des employés utilisant la stack MERN et React Native, avec AWS et Cloudinary pour l’infrastructure associée."
+      >
         Built an employee management system using the MERN stack and React
         Native, with AWS and Cloudinary used for supporting infrastructure.
       </p>
 
 
-      <h3>Lebanese American University — Computer Center Administrator</h3>
-      <p class="meta">Beirut, Lebanon · September 2023 to January 2024</p>
+      <!-- LAU -->
 
-      <p>
+      <h3
+        data-en="Lebanese American University — Computer Center Administrator"
+        data-fr="Lebanese American University — Administrateur du centre informatique"
+      >
+        Lebanese American University — Computer Center Administrator
+      </h3>
+
+      <p
+        class="meta"
+        data-en="Beirut, Lebanon · September 2023 to January 2024"
+        data-fr="Beyrouth, Liban · Septembre 2023 à janvier 2024"
+      >
+        Beirut, Lebanon · September 2023 to January 2024
+      </p>
+
+      <p
+        data-en="Provided technical support to students and university systems, helped maintain computer-center infrastructure, developed the LAU Libraries webpage, and managed campus display screens."
+        data-fr="Assistance technique aux étudiants et aux systèmes universitaires, maintenance de l’infrastructure informatique, développement de la page web des bibliothèques de LAU et gestion des écrans d’affichage du campus."
+      >
         Provided technical support to students and university systems,
         helped maintain computer-center infrastructure, developed the LAU
         Libraries webpage, and managed campus display screens.
       </p>
 
 
-      <h3>Lebanese American University — Teaching Assistant</h3>
-      <p class="meta">CSC243: Introduction to Object-Oriented Programming · January 2023 to May 2023</p>
+      <h3
+        data-en="Lebanese American University — Teaching Assistant"
+        data-fr="Lebanese American University — Assistant d’enseignement"
+      >
+        Lebanese American University — Teaching Assistant
+      </h3>
 
-      <p>
+      <p
+        class="meta"
+        data-en="CSC243: Introduction to Object-Oriented Programming · January 2023 to May 2023"
+        data-fr="CSC243 : Introduction à la programmation orientée objet · Janvier 2023 à mai 2023"
+      >
+        CSC243: Introduction to Object-Oriented Programming · January 2023 to May 2023
+      </p>
+
+      <p
+        data-en="Supported programming laboratory sessions, maintained lab computers, debugged student code, and guided students through Python and object-oriented programming problems."
+        data-fr="Encadrement des séances de laboratoire, maintenance des ordinateurs, débogage du code des étudiants et accompagnement sur des exercices en Python et en programmation orientée objet."
+      >
         Supported programming laboratory sessions, maintained lab computers,
         debugged student code, and guided students through Python and
         object-oriented programming problems.
@@ -363,40 +667,68 @@
            PROJECTS
            ===================================================== -->
 
-      <h2 id="projects">Projects</h2>
+      <h2
+        id="projects"
+        data-en="Projects"
+        data-fr="Projets"
+      >
+        Projects
+      </h2>
 
 
-      <h3 class="project-title">Manufacturing Operations Platform</h3>
+      <h3
+        class="project-title"
+        data-en="Manufacturing Operations Platform"
+        data-fr="Plateforme de gestion industrielle"
+      >
+        Manufacturing Operations Platform
+      </h3>
 
-      <p>
+      <p
+        data-en="Built an operations platform for a diversified manufacturing company in Côte d'Ivoire producing products including pasta, condensed milk, tomato paste, and plastic goods."
+        data-fr="Développement d’une plateforme opérationnelle pour une entreprise industrielle diversifiée en Côte d’Ivoire produisant notamment des pâtes, du lait concentré, du concentré de tomate et des produits en plastique."
+      >
         Built an operations platform for a diversified manufacturing company
         in Côte d'Ivoire producing products including pasta, condensed milk,
         tomato paste, and plastic goods.
       </p>
 
-      <p>
+      <p
+        data-en="The system digitizes workflows from raw-material procurement and production logging through inventory, client management, sales, finance, and administrative operations."
+        data-fr="Le système numérise les workflows depuis l’approvisionnement en matières premières et le suivi de production jusqu’à la gestion des stocks, des clients, des ventes, des finances et des opérations administratives."
+      >
         The system digitizes workflows from raw-material procurement and
         production logging through inventory, client management, sales,
         finance, and administrative operations.
       </p>
 
       <p>
-        Built using React Native, Next.js, NestJS, and PostgreSQL.
+        React Native · Next.js · NestJS · PostgreSQL
       </p>
 
 
-      <h3 class="project-title">Krypteia</h3>
+      <h3 class="project-title">
+        Krypteia
+      </h3>
 
-      <p>
+      <p
+        data-en="Built a mobile AI educational assistant using React Native and NestJS, with retrieval-augmented generation and OpenAI APIs for conversational access to educational content."
+        data-fr="Développement d’un assistant éducatif mobile basé sur l’IA avec React Native et NestJS, utilisant le RAG et les API OpenAI pour fournir un accès conversationnel au contenu éducatif."
+      >
         Built a mobile AI educational assistant using React Native and NestJS,
         with retrieval-augmented generation and OpenAI APIs for conversational
         access to educational content.
       </p>
 
 
-      <h3 class="project-title">Laba3ed</h3>
+      <h3 class="project-title">
+        Laba3ed
+      </h3>
 
-      <p>
+      <p
+        data-en="Founded an aid-matching platform during wartime displacement in Lebanon to connect people requesting assistance with potential donors. The platform fulfilled hundreds of requests and I was interviewed about the initiative twice on national television."
+        data-fr="Création d’une plateforme d’entraide pendant les déplacements liés à la guerre au Liban afin de mettre en relation les personnes ayant besoin d’aide avec des donateurs potentiels. La plateforme a permis de satisfaire des centaines de demandes et a fait l’objet de deux interviews à la télévision nationale."
+      >
         Founded an aid-matching platform during wartime displacement in
         Lebanon to connect people requesting assistance with potential donors.
         The platform fulfilled hundreds of requests and I was interviewed
@@ -404,36 +736,60 @@
       </p>
 
 
-      <h3 class="project-title">ReviewAI</h3>
+      <h3 class="project-title">
+        ReviewAI
+      </h3>
 
-      <p>
+      <p
+        data-en="Built a hackathon project using the GitHub API and Google Gemini to analyze pull requests and generate concise summaries of code changes for reviewers."
+        data-fr="Développement d’un projet de hackathon utilisant l’API GitHub et Google Gemini pour analyser les pull requests et générer des résumés concis des modifications de code."
+      >
         Built a hackathon project using the GitHub API and Google Gemini to
         analyze pull requests and generate concise summaries of code changes
         for reviewers.
       </p>
 
 
-      <h3 class="project-title">Surveyor</h3>
+      <h3 class="project-title">
+        Surveyor
+      </h3>
 
-      <p>
+      <p
+        data-en="Built a Django-based surveying platform while in Grade 11 for a group of engineering students at the American University of Beirut. The final submitted project received 95/100."
+        data-fr="Développement d’une plateforme de sondage basée sur Django en classe de première pour un groupe d’étudiants en ingénierie de l’American University of Beirut. Le projet final a obtenu 95/100."
+      >
         Built a Django-based surveying platform while in Grade 11 for a group
         of engineering students at the American University of Beirut. The
         final submitted project received 95/100.
       </p>
 
 
-      <h3 class="project-title">One Hand</h3>
+      <h3 class="project-title">
+        One Hand
+      </h3>
 
-      <p>
+      <p
+        data-en="Built an Android donation application using Java, XML, and Firebase. The project placed first in an LAU Android development competition and resulted in a 30% undergraduate scholarship."
+        data-fr="Développement d’une application Android de dons utilisant Java, XML et Firebase. Le projet a remporté la première place d’un concours de développement Android à LAU et m’a permis d’obtenir une bourse universitaire de 30 %."
+      >
         Built an Android donation application using Java, XML, and Firebase.
         The project placed first in an LAU Android development competition
         and resulted in a 30% undergraduate scholarship.
       </p>
 
 
-      <h3 class="project-title">Client Platforms</h3>
+      <h3
+        class="project-title"
+        data-en="Client Platforms"
+        data-fr="Plateformes clients"
+      >
+        Client Platforms
+      </h3>
 
-      <p>
+      <p
+        data-en="Developed a management platform for Axiom Energy Partners and websites for Sales Falcons and BAE Bakeries."
+        data-fr="Développement d’une plateforme de gestion pour Axiom Energy Partners ainsi que de sites web pour Sales Falcons et BAE Bakeries."
+      >
         Developed a management platform for Axiom Energy Partners and
         websites for Sales Falcons and BAE Bakeries.
       </p>
@@ -444,25 +800,58 @@
            EDUCATION
            ===================================================== -->
 
-      <h2 id="education">Education</h2>
+      <h2
+        id="education"
+        data-en="Education"
+        data-fr="Formation"
+      >
+        Education
+      </h2>
 
 
-      <h3>École Polytechnique (L'X)</h3>
-      <p class="meta">Palaiseau, France · September 2026 to June 2028</p>
+      <h3>
+        École Polytechnique (L'X)
+      </h3>
 
-      <p>
+      <p
+        class="meta"
+        data-en="Palaiseau, France · September 2026 to June 2028"
+        data-fr="Palaiseau, France · Septembre 2026 à juin 2028"
+      >
+        Palaiseau, France · September 2026 to June 2028
+      </p>
+
+      <p
+        data-en="MSc&amp;T in Large Language Models, Graphs and Applications (LLGA)."
+        data-fr="MSc&amp;T Large Language Models, Graphs and Applications (LLGA)."
+      >
         MSc&amp;T in Large Language Models, Graphs and Applications (LLGA).
       </p>
 
-      <p>
+      <p
+        data-en="France Excellence Eiffel Scholar."
+        data-fr="Lauréat de la bourse France Excellence Eiffel."
+      >
         France Excellence Eiffel Scholar.
       </p>
 
 
-      <h3>Lebanese American University</h3>
-      <p class="meta">Beirut, Lebanon · September 2022 to June 2025</p>
+      <h3>
+        Lebanese American University
+      </h3>
 
-      <p>
+      <p
+        class="meta"
+        data-en="Beirut, Lebanon · September 2022 to June 2025"
+        data-fr="Beyrouth, Liban · Septembre 2022 à juin 2025"
+      >
+        Beirut, Lebanon · September 2022 to June 2025
+      </p>
+
+      <p
+        data-en="Bachelor of Science in Computer Science.&lt;br&gt;High Distinction · GPA: 3.98/4.00.&lt;br&gt;MEPI Tomorrow's Leaders Scholar."
+        data-fr="Bachelor of Science en informatique.&lt;br&gt;High Distinction · GPA : 3.98/4.00.&lt;br&gt;Boursier MEPI Tomorrow's Leaders."
+      >
         Bachelor of Science in Computer Science.<br>
         High Distinction · GPA: 3.98/4.00.<br>
         MEPI Tomorrow's Leaders Scholar.
@@ -471,10 +860,16 @@
 
 
       <!-- =====================================================
-           TECHNICAL SKILLS
+           SKILLS
            ===================================================== -->
 
-      <h2 id="skills">Technical Skills</h2>
+      <h2
+        id="skills"
+        data-en="Technical Skills"
+        data-fr="Compétences techniques"
+      >
+        Technical Skills
+      </h2>
 
       <ul class="compact-list two-col">
         <li>Python</li>
@@ -511,47 +906,79 @@
 
 
       <!-- =====================================================
-           LEADERSHIP AND AWARDS
+           LEADERSHIP
            ===================================================== -->
 
-      <h2 id="awards">Leadership &amp; Awards</h2>
+      <h2
+        id="awards"
+        data-en="Leadership &amp; Awards"
+        data-fr="Leadership &amp; distinctions"
+      >
+        Leadership &amp; Awards
+      </h2>
 
       <ul class="compact-list">
-        <li>
+
+        <li
+          data-en="France Excellence Eiffel Scholar — École Polytechnique."
+          data-fr="Bourse France Excellence Eiffel — École Polytechnique."
+        >
           France Excellence Eiffel Scholar — École Polytechnique.
         </li>
 
-        <li>
+        <li
+          data-en="MEPI Tomorrow's Leaders Scholar — Lebanese American University."
+          data-fr="Boursier MEPI Tomorrow's Leaders — Lebanese American University."
+        >
           MEPI Tomorrow's Leaders Scholar — Lebanese American University.
         </li>
 
-        <li>
+        <li
+          data-en="Vice President — Lebanese American University Computer Science Club."
+          data-fr="Vice-président — Computer Science Club de la Lebanese American University."
+        >
           Vice President — Lebanese American University Computer Science Club.
         </li>
 
-        <li>
+        <li
+          data-en="Founder — Laba3ed; fulfilled hundreds of requests and featured in two national television interviews."
+          data-fr="Fondateur — Laba3ed ; des centaines de demandes satisfaites et deux interviews à la télévision nationale."
+        >
           Founder — Laba3ed; fulfilled hundreds of requests and featured in
           two national television interviews.
         </li>
 
-        <li>
+        <li
+          data-en="1st Place — LAU Android Mobile Development Competition for One Hand; awarded a 30% undergraduate scholarship."
+          data-fr="1re place — Concours de développement mobile Android de LAU avec One Hand ; bourse universitaire de 30 %."
+        >
           1st Place — LAU Android Mobile Development Competition for
           One Hand; awarded a 30% undergraduate scholarship.
         </li>
 
-        <li>
+        <li
+          data-en="Lebanese Collegiate Programming Contest — two-time participant and Honorable Mention."
+          data-fr="Lebanese Collegiate Programming Contest — deux participations et mention honorable."
+        >
           Lebanese Collegiate Programming Contest — two-time participant
           and Honorable Mention.
         </li>
 
-        <li>
+        <li
+          data-en="3rd Place — Web Development Hackathon among approximately 200 contestants."
+          data-fr="3e place — Hackathon de développement web parmi environ 200 participants."
+        >
           3rd Place — Web Development Hackathon among approximately
           200 contestants.
         </li>
 
-        <li>
+        <li
+          data-en="3rd Place — Algorithms Competition, Beirut Lambda Hackerspace."
+          data-fr="3e place — Concours d’algorithmique, Beirut Lambda Hackerspace."
+        >
           3rd Place — Algorithms Competition, Beirut Lambda Hackerspace.
         </li>
+
       </ul>
 
 
@@ -560,16 +987,64 @@
            INTERESTS
            ===================================================== -->
 
-      <h2>Interests</h2>
+      <h2
+        data-en="Interests"
+        data-fr="Centres d’intérêt"
+      >
+        Interests
+      </h2>
 
       <ul class="compact-list">
-        <li>Large language models</li>
-        <li>Agentic AI systems</li>
-        <li>Retrieval-augmented generation</li>
-        <li>AI-native software products</li>
-        <li>SaaS and product engineering</li>
-        <li>Full-stack systems</li>
-        <li>Entrepreneurship</li>
+
+        <li
+          data-en="Large language models"
+          data-fr="Grands modèles de langage"
+        >
+          Large language models
+        </li>
+
+        <li
+          data-en="Agentic AI systems"
+          data-fr="Systèmes d’IA agentiques"
+        >
+          Agentic AI systems
+        </li>
+
+        <li
+          data-en="Retrieval-augmented generation"
+          data-fr="Retrieval-augmented generation"
+        >
+          Retrieval-augmented generation
+        </li>
+
+        <li
+          data-en="AI-native software products"
+          data-fr="Produits logiciels natifs IA"
+        >
+          AI-native software products
+        </li>
+
+        <li
+          data-en="SaaS and product engineering"
+          data-fr="SaaS et ingénierie produit"
+        >
+          SaaS and product engineering
+        </li>
+
+        <li
+          data-en="Full-stack systems"
+          data-fr="Systèmes full-stack"
+        >
+          Full-stack systems
+        </li>
+
+        <li
+          data-en="Entrepreneurship"
+          data-fr="Entrepreneuriat"
+        >
+          Entrepreneurship
+        </li>
+
       </ul>
 
 
@@ -578,22 +1053,90 @@
            CONTACT
            ===================================================== -->
 
-      <h2 id="contact">Contact</h2>
+      <h2
+        id="contact"
+        data-en="Contact"
+        data-fr="Contact"
+      >
+        Contact
+      </h2>
 
       <p>
-        For work, research, freelance, or project discussions, contact me at
+
+        <span
+          data-en="For work, research, freelance, or project discussions, contact me at"
+          data-fr="Pour toute opportunité professionnelle, recherche, mission freelance ou discussion de projet, contactez-moi à"
+        >
+          For work, research, freelance, or project discussions, contact me at
+        </span>
+
         <a href="mailto:adamabouzeid04@gmail.com">
           adamabouzeid04@gmail.com
         </a>.
+
       </p>
 
     </main>
 
 
-    <footer>
+    <footer
+      data-en="Last updated: 2026-08-15."
+      data-fr="Dernière mise à jour : 2026-08-15."
+    >
       Last updated: 2026-08-15.
     </footer>
 
   </div>
+
+
+  <script>
+    function setLanguage(language) {
+      const elements = document.querySelectorAll("[data-en][data-fr]");
+
+      elements.forEach((element) => {
+        const value = element.getAttribute(`data-${language}`);
+
+        /*
+         * innerHTML is used so translated strings containing
+         * <br> or entities such as &amp; continue to render
+         * correctly.
+         */
+        element.innerHTML = value;
+      });
+
+      document.documentElement.lang = language;
+
+      document
+        .getElementById("btn-en")
+        .classList.toggle("active", language === "en");
+
+      document
+        .getElementById("btn-fr")
+        .classList.toggle("active", language === "fr");
+
+      localStorage.setItem("portfolio-language", language);
+    }
+
+    /*
+     * EN is the default.
+     *
+     * If you want the site to remember the user's last choice,
+     * keep this block.
+     *
+     * If you want EVERY new page load to always start in EN,
+     * replace the entire block with:
+     *
+     * setLanguage("en");
+     */
+
+    const savedLanguage = localStorage.getItem("portfolio-language");
+
+    if (savedLanguage === "fr") {
+      setLanguage("fr");
+    } else {
+      setLanguage("en");
+    }
+  </script>
+
 </body>
 </html>
