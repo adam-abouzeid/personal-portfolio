@@ -89,17 +89,47 @@
     main > p { text-align: justify; }
 
     .item { margin-bottom: 14px; }
-    .when { color: #888; }
+    .when { color: #888; white-space: nowrap; }
 
     footer { color: #999; font-size: 13px; margin-top: 36px; }
 
     @media (max-width: 720px) {
-      .wrapper { flex-direction: column; gap: 8px; padding: 32px 16px; }
-      aside { width: auto; text-align: center; }
-      .side-inner { position: static; }
-      .lang { top: 10px; right: 16px; }
-      .photo { width: 140px; height: 181px; margin: 0 auto 14px; }
+      .wrapper { flex-direction: column; gap: 0; padding: 44px 16px 32px; }
+      .lang { top: 14px; right: 16px; }
+
+      /* Photo on the left, name and links on the right. */
+      aside { width: auto; }
+      .side-inner {
+        position: static;
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        column-gap: 16px;
+        align-items: start;
+      }
+      .photo { width: 112px; height: 145px; margin: 0; grid-row: 1 / span 4; }
+      h1 { font-size: 22px; }
+      .tagline { margin-bottom: 8px; }
+      .side-links { margin-bottom: 8px; }
+      .side-links br { display: none; }
+      .side-links a { margin-right: 14px; }
+      .email { margin-bottom: 0; word-break: break-all; }
+
+      /* Section links become one row under the header. */
+      .side-nav {
+        grid-column: 1 / -1;
+        margin: 18px 0 0;
+        padding: 10px 0;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+      }
+      .side-nav br { display: none; }
+
+      main { margin-top: 22px; }
       main > p { text-align: left; }
+      hr { margin: 24px 0; }
     }
   </style>
 </head>
@@ -331,6 +361,7 @@
       <li><span lang="en">3rd place, Web Development Hackathon (about 200 contestants).</span><span lang="fr">3e place, hackathon de développement web (environ 200 participants).</span></li>
       <li><span lang="en">3rd place, Algorithms Competition, Beirut Lambda Hackerspace.</span><span lang="fr">3e place, concours d’algorithmique, Beirut Lambda Hackerspace.</span></li>
       <li><span lang="en">Honorable Mention, Lebanese Collegiate Programming Contest.</span><span lang="fr">Mention honorable, Lebanese Collegiate Programming Contest.</span></li>
+      <li><span lang="en">Founder, Laba3ed, a wartime aid-matching platform; interviewed live twice on national television, 2024.</span><span lang="fr">Fondateur de Laba3ed, une plateforme d’entraide en temps de guerre ; deux interviews en direct à la télévision nationale, 2024.</span></li>
       <li><span lang="en">Vice President, LAU Computer Science Club.</span><span lang="fr">Vice-président, Computer Science Club de LAU.</span></li>
     </ul>
 
